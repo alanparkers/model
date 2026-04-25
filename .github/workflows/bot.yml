@@ -25,12 +25,8 @@ jobs:
 
       - name: Pull tiny model
         run: |
-          ollama pull tinyllama
-
-      - name: Start Ollama
-        run: |
           ollama serve &
-          sleep 5
+          ollama pull tinyllama
 
       - name: Create server
         run: |
